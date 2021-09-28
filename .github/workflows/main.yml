@@ -20,4 +20,4 @@ jobs:
       - name: Generate the package
         run: mvn -B package --file pom.xml
       - name: Deploy to tomcat
-        run: curl -v -u admin:admin -T /home/runner/work/java-project/java-project/target/WebApp-pipeline.war 'http://52.66.239.240:8080//manager/text/deploy?path=/web_app&update=true'
+        run: curl -v -u admin:admin -T /home/runner/work/java-project/java-project/target/WebApp-pipeline.war 'http://13.233.57.60/:8080//manager/text/deploy?path=/web_app&update=true'
