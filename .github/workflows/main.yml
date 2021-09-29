@@ -4,7 +4,7 @@ on: [push]
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v2
@@ -14,5 +14,5 @@ jobs:
           java-version: 1.8
       - name: Generate the package
         run: mvn -B package --file pom.xml
-      - name: Deploy to tomcat
-        run: curl -v -u ${{ secrets.admin}}:${{ secrets.rimmi}} -T /home/runner/work/java-project/java-project/target/WebApp-pipeline.war 'http://13.233.16.20:8080//manager/text/deploy?path=/y&update=true'
+      #- name: Deploy to tomcat
+        #run: curl -v -u ${{ secrets.admin}}:${{ secrets.rimmi}} -T /home/runner/work/java-project/java-project/target/WebApp-pipeline.war 'http://13.233.16.20:8080//manager/text/deploy?path=/y&update=true'
