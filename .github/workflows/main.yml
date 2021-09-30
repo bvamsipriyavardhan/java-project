@@ -15,4 +15,4 @@ jobs:
       - name: Generate the package
         run: mvn -B package --file pom.xml
       - name: Deploy to tomcat
-        run: curl -v -u ${{ secrets.admin}}:${{ secrets.rimmi}} -T /home/ubuntu/actions-runner/_work/java-project/java-project/target/WebApp-pipeline.war 'http://13.233.16.20:8080//manager/text/deploy?path=/rimmi&update=true'
+        run: curl -v -u ${{ secrets.admin}}:${{ secrets.rimmi}} -T /home/ubuntu/actions-runner/_work/java-project/java-project/target/WebApp-pipeline.war 'http://13.126.62.208:8080//manager/text/deploy?path=/rimmi&update=true'
